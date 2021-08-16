@@ -32,24 +32,28 @@ const [key, setkey] = useState("")
           console.log("data is :");
           console.log(response.data.results[0].key);
           setkey(response.data.results[0])
-
+          window.open(`https://www.youtube.com/watch?v=${response.data.results[0].key}`)
           })
+
+        
+        // <a href="href={`https://www.youtube.com/watch?v=${key.key}`}"></a>
       }
     return (
         <div className='row' >
             <h2>{props.title }</h2>
             <div className='posters'>
                 {
-                    image.map((obj) => <img onClick = {()=>imageVideo(obj.id)} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />)
+                    
+                    image.map((obj) => <a > <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} /></a> )
                 }
                
                
             </div>
             
-            <div >
-            {key && <YouTube videoId={key.key} opts={opts}  /> }
+            {/* <div >
+            {key.key ? <YouTube videoId={key.key} opts={opts} />  : }
 
-            </div>
+            </div> */}
         </div>
     )
 }
