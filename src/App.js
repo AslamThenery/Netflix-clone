@@ -11,7 +11,7 @@ function App() {
         <NavBar/>
         <Banner/>
         <RowPost title = "Horror" url = {horrorMovies}/>
-        <RowPost title = "Commedy" url = {commedyMovies}/>
+        <RowPost title = "Commedy" url = {commedyMovies} app / >
         
     </div>
   );

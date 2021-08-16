@@ -1,25 +1,54 @@
 import React, { useEffect, useState } from 'react'
 import axios from '../axios'
-import {imageUrl} from '../../constants/constants'
+import YouTube from 'react-youtube'
+import {API_KEY, imageUrl} from '../../constants/constants'
 import './RowPost.css'
 function RowPost(props) {
 const [image, setImage] = useState([])
+const [key, setkey] = useState("")
     useEffect(() => {
         axios.get(props.url).then((response) =>{
 
             console.log(response.data.results)
+            console.log(response.data.results[0].id)
+
             setImage(response.data.results)
         })
     }, [])
+    const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 0,
+        },
+      };
+
+      const imageVideo = (id) => {
+          console.log("The id is:");
+          console.log(id);
+          axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then((response) => {
+              
+          console.log("data is :");
+          console.log(response.data.results[0].key);
+          setkey(response.data.results[0])
+
+          })
+      }
     return (
-        <div className='row'>
+        <div className='row' >
             <h2>{props.title }</h2>
             <div className='posters'>
                 {
-                    image.map((obj) => <img className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />)
+                    image.map((obj) => <img onClick = {()=>imageVideo(obj.id)} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />)
                 }
                
                
+            </div>
+            
+            <div >
+            {key && <YouTube videoId={key.key} opts={opts}  /> }
+
             </div>
         </div>
     )
