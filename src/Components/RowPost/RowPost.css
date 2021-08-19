@@ -16,7 +16,16 @@
 
 
 .poster{
-    max-height: 250px;
+    max-height: 750px;
     margin-right: 10px;
+    width: 350px;
+    height: 400px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+    
 
+}
+.poster :hover{
+    
 }

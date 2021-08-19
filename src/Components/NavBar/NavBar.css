@@ -23,3 +23,34 @@ width: 80px;
     width: 30px;
 }
 
+
+
+.search-input{
+    margin-left:550px ;
+    border: none;
+    height: 30px;
+    width: 300px;
+    position: fixed;
+    outline: none;
+    border-radius: 2px;
+}
+.search-button{
+    margin-left: 852px;
+    border: none;
+    height: 30px;
+    width: 75px;
+    
+    position: fixed;
+}
+a{
+    color: beige;
+    text-decoration: none;
+}
+.pages{
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    
+}
+
