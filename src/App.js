@@ -1,17 +1,25 @@
 import React from 'react'
-import NavBar from './Components/NavBar/NavBar'
-import {horrorMovies, commedyMovies} from "./constants/url"
+import { BrowserRouter as Router,
+          Route,
+          Link,
+          Switch
+          } from 'react-router-dom';
+import Home from './Pages/Home';
+import Search from './Pages/Search';
 import './App.css'
-import Banner from './Components/Banner/Banner'
-import RowPost from './Components/RowPost/RowPost'
+
 
 function App() {
   return (
     <div className="App">
-        <NavBar/>
-        <Banner/>
-        <RowPost title = "Horror" url = {horrorMovies}/>
-        <RowPost title = "Commedy" url = {commedyMovies} app / >
+    <Router>
+      <Route exact path="/">
+        <Home/>
+      </Route>
+      <Route  path="/search">
+        <Search/>
+      </Route>
+    </Router>
         
     </div>
   );
