@@ -10,10 +10,10 @@ function NavBar() {
   //   history.push("/Search");
   //   // export const text = searchTxt
   // };
-  const showsHandle = (e) => {
-    e.preventDefault();
-    history.push("/tvshows");
-  };
+  // const showsHandle = (e) => {
+  //   e.preventDefault();
+  //   history.push("/tvshows");
+  // };
   const moviesHandle = (e) => {
     e.preventDefault();
     history.push("/movies");
@@ -27,13 +27,13 @@ function NavBar() {
       />
       <div className="pages">
         <button className="nav-btn" >Home</button>
-        <button className="nav-btn" onClick={showsHandle}>
+        {/* <button className="nav-btn" onClick={showsHandle}>
           Tv Shows
-        </button>
+        </button> */}
         <button className="nav-btn" onClick={moviesHandle}>
           Movies
         </button>
-        <button className="nav-btn" >My List</button>
+        {/* <button className="nav-btn" >My List</button> */}
       </div>
 
       <input
