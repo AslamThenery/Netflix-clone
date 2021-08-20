@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from '../axios'
 import YouTube from 'react-youtube'
 import {API_KEY, imageUrl} from '../../constants/constants'
+
 import './RowPost.css'
 function RowPost(props) {
 const [image, setImage] = useState([])
@@ -9,8 +10,8 @@ const [key, setkey] = useState("")
     useEffect(() => {
         axios.get(props.url).then((response) =>{
 
-            console.log(response.data.results)
-            console.log(response.data.results[0].id)
+            // console.log(response.data.results)
+            // console.log(response.data.results[0].id)
 
             setImage(response.data.results)
         })
@@ -42,11 +43,14 @@ const [key, setkey] = useState("")
         <div className='row' >
             <h2>{props.title }</h2>
             <div className='posters'>
-                {
+         
+
+            {
                     
                     image.map((obj) => <a > <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} /></a> )
                 }
-               
+       
+                
                
             </div>
             
@@ -57,5 +61,6 @@ const [key, setkey] = useState("")
         </div>
     )
 }
+
 
 export default RowPost
