@@ -42,9 +42,12 @@ width: 80px;
     
     position: fixed;
 }
-a{
+.nav-btn{
     color: beige;
     text-decoration: none;
+    background-color: black;
+    border: none;
+    font-size: 1rem;
 }
 .pages{
     margin-left: 100px;

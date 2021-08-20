@@ -15,7 +15,7 @@ const [image, setImage] = useState([])
 
             setImage(response.data.results)
         })
-    }, [])
+    })
     // const opts = {
     //     height: '390',
     //     width: '640',
@@ -47,7 +47,7 @@ const [image, setImage] = useState([])
 
             {
                     
-                    image.map((obj) => <a > <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} /></a> )
+                    image.map((obj) =>  <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />)
                 }
        
                 

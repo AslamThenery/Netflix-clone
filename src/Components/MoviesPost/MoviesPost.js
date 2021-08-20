@@ -14,7 +14,7 @@ const [image, setImage] = useState([])
 
             setImage(response.data.results)
         })
-    }, [])
+    })
    
       const imageVideo = (id) => {
           console.log("The id is:");
@@ -38,9 +38,9 @@ const [image, setImage] = useState([])
 
             {
                     
-                    image.map((obj) => <a > <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />
-                    {/* <button className="trailer-btn">Watch Trailer</button> */}
-                    </a> )
+                    image.map((obj) =>  <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />
+                  
+                     )
                 }
        
                 

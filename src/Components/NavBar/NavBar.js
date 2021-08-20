@@ -26,14 +26,14 @@ function NavBar() {
         alt="Netflix Logo"
       />
       <div className="pages">
-        <a href="">Home</a>
-        <a href="" onClick={showsHandle}>
+        <button className="nav-btn" >Home</button>
+        <button className="nav-btn" onClick={showsHandle}>
           Tv Shows
-        </a>
-        <a href="" onClick={moviesHandle}>
+        </button>
+        <button className="nav-btn" onClick={moviesHandle}>
           Movies
-        </a>
-        <a href="">My List</a>
+        </button>
+        <button className="nav-btn" >My List</button>
       </div>
 
       <input
