@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from '../axios'
 // import YouTube from 'react-youtube'
-import {API_KEY, imageUrl} from '../../constants/constants'
+import { imageUrl} from '../../constants/constants'
 
 import './RowPost.css'
 function RowPost(props) {
@@ -28,7 +28,7 @@ const [image, setImage] = useState([])
       const imageVideo = (id) => {
           console.log("The id is:");
           console.log(id);
-          axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then((response) => {
+          axios.get(props.url).then((response) => {
               
         //   console.log("data is :");
         //   console.log(response.data.results[0].key);

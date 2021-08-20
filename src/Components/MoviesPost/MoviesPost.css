@@ -1,4 +1,21 @@
 .movie-row{
     margin-top: 80px;
     color: white;
+    
 }
+.movie-row a{
+
+    display: flex;
+    flex-direction: column;
+   
+}
+/* .trailer-btn{
+    width: 153px;
+    height: 45px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-left: 50px;
+    
+    
+} */

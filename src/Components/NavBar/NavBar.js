@@ -1,41 +1,56 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
+  // const [searchTxt, setsearchTxt] = useState()
+  const history = useHistory();
 
-  const [searchTxt, setsearchTxt] = useState()
-const history = useHistory()
-
-    const searchHandle = () => {
-history.push("/Search")
-// export const text = searchTxt 
-    }
-    const showsHandle = (e) => {
-      e.preventDefault()
-      history.push('/tvshows')
-    }
-    const moviesHandle = (e) => {
-      e.preventDefault()
-      history.push('/movies')
-    }
+  // const searchHandle = () => {
+  //   history.push("/Search");
+  //   // export const text = searchTxt
+  // };
+  const showsHandle = (e) => {
+    e.preventDefault();
+    history.push("/tvshows");
+  };
+  const moviesHandle = (e) => {
+    e.preventDefault();
+    history.push("/movies");
+  };
   return (
-    <div className="navbar"> 
+    <div className="navbar">
       <img
         className="logo"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
         alt="Netflix Logo"
-      />  
+      />
       <div className="pages">
-      <a href="">Home</a>
-      <a href="" onClick={showsHandle}>Tv Shows</a>
-      <a href="" onClick={moviesHandle}>Movies</a>
-      <a href="">My List</a>
+        <a href="">Home</a>
+        <a href="" onClick={showsHandle}>
+          Tv Shows
+        </a>
+        <a href="" onClick={moviesHandle}>
+          Movies
+        </a>
+        <a href="">My List</a>
       </div>
-      
-      <input className="search-input" onChange={()=>{setsearchTxt()}} type="text" placeholder="Search" name="" id="" />
-      <button className="search-button" onClick={()=>{searchHandle()}}>Search</button>
-      
+
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Search"
+        name=""
+        id=""
+      />
+      <button
+        className="search-button"
+        
+        
+      >
+        Search
+      </button>
+
       {/* <img className="avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="Avatar"/> */}
     </div>
   );

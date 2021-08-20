@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from '../axios'
-import {API_KEY, imageUrl} from '../../constants/constants'
+import { imageUrl} from '../../constants/constants'
 
 import './MoviesPost.css'
 function MoviesPost(props) {
@@ -38,7 +38,9 @@ const [image, setImage] = useState([])
 
             {
                     
-                    image.map((obj) => <a > <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} /></a> )
+                    image.map((obj) => <a > <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />
+                    {/* <button className="trailer-btn">Watch Trailer</button> */}
+                    </a> )
                 }
        
                 
