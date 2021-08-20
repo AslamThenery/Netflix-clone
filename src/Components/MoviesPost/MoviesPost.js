@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from '../axios'
-// import YouTube from 'react-youtube'
 import {API_KEY, imageUrl} from '../../constants/constants'
 
-import './RowPost.css'
-function RowPost(props) {
+import './MoviesPost.css'
+function MoviesPost(props) {
 const [image, setImage] = useState([])
 // const [key, setkey] = useState("")
     useEffect(() => {
@@ -16,19 +15,11 @@ const [image, setImage] = useState([])
             setImage(response.data.results)
         })
     }, [])
-    // const opts = {
-    //     height: '390',
-    //     width: '640',
-    //     playerVars: {
-    //       // https://developers.google.com/youtube/player_parameters
-    //       autoplay: 0,
-    //     },
-    //   };
-
+   
       const imageVideo = (id) => {
           console.log("The id is:");
           console.log(id);
-          axios.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then((response) => {
+          axios.get(props.url).then((response) => {
               
         //   console.log("data is :");
         //   console.log(response.data.results[0].key);
@@ -37,10 +28,10 @@ const [image, setImage] = useState([])
           })
 
         
-        // <a href="href={`https://www.youtube.com/watch?v=${key.key}`}"></a>
+        
       }
     return (
-        <div className='row' >
+        <div className='movie-row' >
             <h2>{props.title }</h2>
             <div className='posters'>
          
@@ -54,13 +45,11 @@ const [image, setImage] = useState([])
                
             </div>
             
-            {/* <div >
-            {key.key ? <YouTube videoId={key.key} opts={opts} />  : }
-
-            </div> */}
+        
         </div>
     )
 }
 
 
-export default RowPost
+export default MoviesPost
+
