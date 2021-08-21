@@ -47,8 +47,10 @@ const [image, setImage] = useState([])
 
             {
                     
-                    image.map((obj) =>  <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />)
+            
+                image.map((obj) =>  <img onClick = { ()=>{imageVideo(obj.id)}} className="poster" alt='items' src={`${imageUrl + obj.backdrop_path}`} />)
                 }
+
        
                 
                

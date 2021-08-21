@@ -6,14 +6,18 @@ function NavBar() {
   // const [searchTxt, setsearchTxt] = useState()
   const history = useHistory();
 
+  const homeHandle = () => {
+    history.push("/");
+    // export const text = searchTxt
+  };
   // const searchHandle = () => {
   //   history.push("/Search");
   //   // export const text = searchTxt
   // };
-  // const showsHandle = (e) => {
-  //   e.preventDefault();
-  //   history.push("/tvshows");
-  // };
+  const showsHandle = (e) => {
+    e.preventDefault();
+    history.push("/tvshows");
+  };
   const moviesHandle = (e) => {
     e.preventDefault();
     history.push("/movies");
@@ -26,10 +30,10 @@ function NavBar() {
         alt="Netflix Logo"
       />
       <div className="pages">
-        <button className="nav-btn" >Home</button>
-        {/* <button className="nav-btn" onClick={showsHandle}>
+        <button className="nav-btn" onClick={homeHandle} >Home</button>
+        <button className="nav-btn" onClick={showsHandle}>
           Tv Shows
-        </button> */}
+        </button>
         <button className="nav-btn" onClick={moviesHandle}>
           Movies
         </button>

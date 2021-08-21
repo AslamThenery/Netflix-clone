@@ -8,11 +8,16 @@ const [image, setImage] = useState([])
 // const [key, setkey] = useState("")
     useEffect(() => {
         axios.get(props.url).then((response) =>{
+console.log("path is ");
+            console.log(response.data.results.backdrop_path)
+            
 
-            // console.log(response.data.results)
-            // console.log(response.data.results[0].id)
+            let images = response.data.results
 
-            setImage(response.data.results)
+            images.map((images)=>{if(images.backdrop_path){setImage(response.data.results)}
+        return images
+        })
+            
         })
     })
    
@@ -37,10 +42,11 @@ const [image, setImage] = useState([])
          
 
             {
-                    
+                   
                     image.map((obj) =>  <img onClick = { ()=>{imageVideo(obj.id)}} className='poster' alt='poster' src={`${imageUrl + obj.backdrop_path}`} />
                   
                      )
+                     
                 }
        
                 

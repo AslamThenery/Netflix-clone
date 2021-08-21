@@ -11,7 +11,7 @@ function Home() {
         <Banner/>
         {/* <RowPost title = "Horror" url = {horrorMovies}/>
         <RowPost title = "Commedy" url = {commedyMovies} app / > */}
-        <RowPost title = "Trending" url = {trending} app / >
+        <RowPost title = "Trending" url = {trending} / >
         </div>
     )
 }

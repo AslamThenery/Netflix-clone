@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Search from "./Pages/Search";
 import "./App.css";
-import Tvshoews from "./Pages/Tvshoews";
+import Tvshows from "./Pages/Tvshows";
 import Movies from "./Pages/Movies";
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
           <Route  path="/movies">
             <Movies />
           </Route>
-          <Route  path="/tvshoes">
-            <Tvshoews />
+          <Route  path="/tvshows">
+            <Tvshows />
           </Route>
         {/* </Switch> */}
       </Router>

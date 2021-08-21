@@ -28,6 +28,11 @@ RomanceMovies: 'https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY_HE
 
 Documentaries: 'https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY_HERE}&with_genres=99',
 
+LatestTvShows: 'https://api.themoviedb.org/3/tv/latest?api_key=<<api_key>>&language=en-US'
+
+PopularTvShows: 'https://api.themoviedb.org/3/tv/popular?api_key=<<api_key>>&language=en-US&page=1'
+
+TopratedTvShows: 'https://api.themoviedb.org/3/tv/top_rated?api_key=<<api_key>>&language=en-US&page=1'
 ////////////////////////////////////////////////////////////////////API KEY////////////////////////////////////////////////////////////////////////////
 
  API_KEY = "f8ddf6b67b66a1e4d0ac19326b4b4793"
