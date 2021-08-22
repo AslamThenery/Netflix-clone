@@ -14,7 +14,7 @@ function SearchPost(props) {
   let searchText = props.text;
   console.log(searchText);
 
-  useEffect(() => {
+  useEffect(() => { 
     console.log("Search text is:");
     console.log(searchText);
     setquery(searchText);
