@@ -11,7 +11,7 @@ function Banner() {
                 console.log(movies)
                 // let movieNum = Math.floor(Math.random() *movies.length);
                 // console.log(movies[movieNum]);
-                setMovie(movies[8])
+                setMovie(movies[15])
         })
     }, [])
     return (
@@ -19,13 +19,13 @@ function Banner() {
          className='banner'>
             <div className='content' >
                 <h1 className='title'>{movie ? movie.title : ""}  </h1>
-                <div className='banner_buttons' >
+                {/* <div className='banner_buttons' >
                     <button className='button' >Play</button>
                     <button className='button' >My list</button>
-                </div>
+                </div> */}
                 <h1 className='description'>{movie ? movie.overview : ""}</h1>
             </div>
-        <div className="fade_bottom"></div>
+        
         </div>
     )
 }

@@ -1,0 +1,43 @@
+.search-pg{
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* max-width: 100%; */
+}
+
+ .search-items{
+    
+    /* background-color: blue; */
+    
+    
+    
+     font-size: 14px;
+     display: flex;
+     max-width: 100%;
+     flex-direction: row;
+     
+ 
+} 
+.search-data{
+    /* background-color:blueviolet; */
+    margin-top: 10px;
+    font-size: 14px;
+    /* width: 500px; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    order: 5;
+    font-size: 14rem;
+}
+.search-img{
+    padding: 5px;
+    height: 250px;
+    width: 250px;
+    border-radius: 9px;
+}
+.search-data h1{
+    font-size: 16px;
+    margin-left: 10px;
+    color:#FFFFFF;
+}

@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
-  // const [searchTxt, setsearchTxt] = useState()
+  const [searchTxt, setsearchTxt] = useState();
+
   const history = useHistory();
 
   const homeHandle = () => {
     history.push("/");
     // export const text = searchTxt
   };
-  // const searchHandle = () => {
-  //   history.push("/Search");
-  //   // export const text = searchTxt
-  // };
+  const searchHandle = () => {
+    if (searchTxt) {
+      history.push({
+        pathname: "/search",
+        state: { searchTxt }, // your data array of objects
+      });
+    }
+    // export const text = searchTxt
+  };
   const showsHandle = (e) => {
     e.preventDefault();
     history.push("/tvshows");
@@ -30,28 +36,29 @@ function NavBar() {
         alt="Netflix Logo"
       />
       <div className="pages">
-        <button className="nav-btn" onClick={homeHandle} >Home</button>
+        <div className="nav-opts">
+        <button className="nav-btn" onClick={homeHandle}>
+          Home
+        </button>
         <button className="nav-btn" onClick={showsHandle}>
           Tv Shows
         </button>
         <button className="nav-btn" onClick={moviesHandle}>
           Movies
         </button>
+        </div>
         {/* <button className="nav-btn" >My List</button> */}
       </div>
 
       <input
         className="search-input"
+        onChange={(e) => setsearchTxt(e.target.value)}
         type="text"
         placeholder="Search"
         name=""
         id=""
       />
-      <button
-        className="search-button"
-        
-        
-      >
+      <button className="search-button" onClick={searchHandle}>
         Search
       </button>
 

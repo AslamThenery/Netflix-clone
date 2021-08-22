@@ -1,12 +1,22 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
+import NavBar from "../Components/NavBar/NavBar"
+import SearchPost from '../Components/SearchPage/SearchPost'
 
-import text from '../Components/NavBar/NavBar'
-import "./Search.css"
 
-function Search() {
+// import text from '../Components/NavBar/NavBar'
+
+function Search(props) {
+    const location = useLocation()
+    console.log(location.pathname);
+    const text = location.state.searchTxt
+    console.log(text);
+   
     return (
-        <div className='search-pg'>
-            <h1>{text ? text : ""}</h1>
+
+        <div>
+        <NavBar/>
+        <SearchPost text ={text}/>
         </div>
     )
 }
