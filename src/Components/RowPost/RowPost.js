@@ -33,7 +33,7 @@ const [image, setImage] = useState([])
         //   console.log("data is :");
         //   console.log(response.data.results[0].key);
         //   setkey(response.data.results[0])
-          window.open(`https://www.youtube.com/watch?v=${response.data.results[0].key}`)
+        //   window.open(`https://www.youtube.com/watch?v=${response.data.results[0].key}`)
           })
 
         

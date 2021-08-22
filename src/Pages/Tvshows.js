@@ -6,7 +6,8 @@ import {latestTvShows, popularTvShows} from "../constants/url"
 function Tvshows() {
     return (
         <div>
-            <NavBar/>
+                   <NavBar name = "nav-btn"/>
+
             {/* <TvShowsPost tittle="Top Rated" url={topratedTvShows}/> */}
              <TvShowsPost tittle="Popular" url={popularTvShows}/>
             <TvShowsPost tittle="Upcoming" url={latestTvShows}/> 

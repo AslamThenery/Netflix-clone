@@ -11,22 +11,39 @@
     background-color: black;
    
 }
+.nav-btn{
+    height: 66px;
+    margin-top: -16px
+}
+.nav-btn:hover{
+    background-color: white;
+    color: black;
+}
 .nav-opts{
     display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
     
+}
+.nav-icon{
+    /* background-color: blanchedalmond; */
+    display: none;
+    color: blanchedalmond;
+    margin-left: 10px;
+    font-size: 1.5rem;
 }
 
 .logo{
 /* position: fixed; */
-left: 20px;
+margin-left: 30px;
 width: 80px;
 }
 
-.avatar {
+/* .avatar {
     position: fixed;
     right: 20px;
     width: 30px;
-}
+} */
 
 
 
@@ -48,6 +65,7 @@ width: 80px;
     /* position: fixed; */
 }
 .nav-btn{
+    /* display: none; */
     color: beige;
     text-decoration: none;
     background-color: black;
@@ -60,8 +78,48 @@ width: 80px;
     margin-left: 100px;
     display: flex;
     justify-content: space-between;
-    width: 400px;
-
-    
+    /* width: 400px; */ 
 }
-
+.input-btn{
+    display: flex;
+    justify-content: center;
+}
+/* @media (max-width:767px) {
+    .nav-btn{
+        display: none;
+    }
+    .nav-icon{
+        display: block;
+    }
+    .input-btn{
+        margin-left: -157px;
+    }
+    .search-input{
+        width: 150px;
+    }
+    .nav .nav-opts.is-active{
+        display: block;
+    }
+}
+@media (max-width:360px) {
+    .nav-btn{
+        display: none;
+    }
+    .nav-icon{
+        display: block;
+        margin-left: 20px;
+    }
+    .input-btn{
+        margin-left: -130px;
+    }
+    .search-input{
+        width: 150px;
+    }
+    .search-button{
+        width: 40px;
+        font-size: 12px;
+    }
+    .logo{
+        display: none;
+    }
+} */

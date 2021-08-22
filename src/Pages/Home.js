@@ -7,7 +7,7 @@ import "./Home.css"
 function Home() {
     return (
         <div>
-        <NavBar/>
+        <NavBar name = "nav-btn"/>
         <Banner/>
         {/* <RowPost title = "Horror" url = {horrorMovies}/>
         <RowPost title = "Commedy" url = {commedyMovies} app / > */}

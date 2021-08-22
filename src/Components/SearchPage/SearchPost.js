@@ -39,7 +39,7 @@ function SearchPost(props) {
             return (
               <div className="search-data">
                 
-                {obj.backdrop_path ? <img  className="search-img" alt='items' src={`${imageUrl + obj.backdrop_path}`} /> : ''}
+                {obj.backdrop_path ? <img className="posters" className="search-img" alt='items' src={`${imageUrl + obj.backdrop_path}`} /> : ''}
                 {obj.backdrop_path ? <h1>{obj.title}</h1>:""}
               </div>
             );

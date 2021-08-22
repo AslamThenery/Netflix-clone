@@ -7,7 +7,8 @@ function Movies() {
     return (
         <div>
 
-            <NavBar />
+<NavBar name = "nav-btn"/>
+
             <MoviesPost  title="Horror" url = {horrorMovies}/>
             <MoviesPost  title="Commedy" url = {commedyMovies}/>
             

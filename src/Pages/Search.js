@@ -15,7 +15,9 @@ function Search(props) {
     return (
 
         <div>
-        <NavBar/>
+
+<NavBar name = "nav-btn"/>
+
         <SearchPost text ={text}/>
         </div>
     )
