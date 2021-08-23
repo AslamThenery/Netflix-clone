@@ -11,6 +11,24 @@
     background-color: black;
    
 }
+.logo{
+    /* position: fixed; */
+    margin-left: 30px;
+    width: 80px;
+    }
+.nav-icon{
+        /* background-color: blanchedalmond; */
+        display: none;
+        color: blanchedalmond;
+        margin-left: 10px;
+        font-size: 1.5rem;
+}
+.nav-opts{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    
+}
 .nav-btn{
     height: 66px;
     margin-top: -16px
@@ -19,25 +37,10 @@
     background-color: white;
     color: black;
 }
-.nav-opts{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 8px;
-    
-}
-.nav-icon{
-    /* background-color: blanchedalmond; */
-    display: none;
-    color: blanchedalmond;
-    margin-left: 10px;
-    font-size: 1.5rem;
-}
 
-.logo{
-/* position: fixed; */
-margin-left: 30px;
-width: 80px;
-}
+
+
+
 
 /* .avatar {
     position: fixed;
