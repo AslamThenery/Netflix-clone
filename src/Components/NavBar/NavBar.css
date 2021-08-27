@@ -18,8 +18,9 @@
     }
 .nav-icon{
         /* background-color: blanchedalmond; */
-        display: none;
+        /* display: none; */
         color: blanchedalmond;
+        /* color: red; */
         margin-left: 10px;
         font-size: 1.5rem;
 }
@@ -30,26 +31,24 @@
     
 }
 .nav-btn{
-    height: 66px;
-    margin-top: -16px
+    /* display: none; */
+    color: beige;
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    font-size: 1rem;
+    width: 100px;
+
 }
 .nav-btn:hover{
     background-color: white;
     color: black;
 }
 
-
-
-
-
-/* .avatar {
-    position: fixed;
-    right: 20px;
-    width: 30px;
-} */
-
-
-
+.input-btn{
+    display: flex;
+    justify-content: center;
+}
 .search-input{
     margin-left:181px ;
     border: none;
@@ -67,44 +66,60 @@
     
     /* position: fixed; */
 }
-.nav-btn{
-    /* display: none; */
-    color: beige;
-    text-decoration: none;
-    background-color: black;
-    border: none;
-    font-size: 1rem;
-    width: 100px;
 
-}
 .pages{
     margin-left: 100px;
     display: flex;
     justify-content: space-between;
     /* width: 400px; */ 
 }
-.input-btn{
-    display: flex;
-    justify-content: center;
-}
-/* @media (max-width:767px) {
-    .nav-btn{
+
+@media screen and (max-width:480px) {
+    .logo{
         display: none;
+    }
+    .nav-opts{
+        /* display: block; */
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 10rem;
+        width:8rem;
+        background-color: black;
+        margin-top: 50px;
+        margin-left:6px ;
+        border-radius: 3px;
+        border: 1px solid white;
+        /* color: red; */
+    }
+    .nav-btn{
+        width: 8rem;
+        height: 3rem;
+    }
+    .nav-btn:hover{
+        background-color: white;
+        color: black;
     }
     .nav-icon{
         display: block;
+        margin-left:10px;
+        color: red;
+        font-size: 5rem;
+        
     }
     .input-btn{
-        margin-left: -157px;
+        margin-left: -100px;
+        /* width: 180px; */
     }
     .search-input{
         width: 150px;
     }
-    .nav .nav-opts.is-active{
-        display: block;
-    }
+    
 }
-@media (max-width:360px) {
+/* @media (max-width:360px) {
     .nav-btn{
         display: none;
     }
@@ -123,6 +138,6 @@
         font-size: 12px;
     }
     .logo{
-        display: none;
-    }
+        display: none; */
+    /* }
 } */

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar(props) {
+function NavBar() {
   const [searchTxt, setsearchTxt] = useState();
  const [isActive, setisActive] = useState(false)
   const history = useHistory();
@@ -30,11 +30,10 @@ function NavBar(props) {
   };
     function classHandle(){
 
-      console.log(props.data);
-           setisActive(true)
-           if(isActive){
-             props.name = "is-active"
-           }
+      console.log();
+           setisActive(!isActive)
+           console.log("icon Clicked");
+           
            
     // document.getElementById("icon").style(displ)
   }
@@ -47,6 +46,7 @@ function NavBar(props) {
       />
       {/* <div className="pages"> */}
       <i onClick={classHandle} id="icon" class="nav-icon fa fa-bars"></i>
+     { isActive ?
       <div className="nav-opts ">
        
         <button className="nav-btn" onClick={homeHandle}>
@@ -58,25 +58,20 @@ function NavBar(props) {
         <button className="nav-btn" onClick={moviesHandle}>
           Movies
         </button>
-      </div>
+      </div> :""}
       {/* <button className="nav-btn" >My List</button> */}
 
       {/* </div> */}
-      <div className="input-btn">
-      <input
-        className="search-input"
-        onChange={(e) => setsearchTxt(e.target.value)}
-        type="text"
-        placeholder="Search"
-        name=""
-        id=""
-      />
+      
+        <div className="input-btn">
+      <input className="search-input" onChange={(e) => setsearchTxt(e.target.value)} type="text" placeholder="Search"/>
       <button className="search-button" onClick={searchHandle}>
         Search
       </button>
-      </div>
+      
+      </div> 
 
-      {/* <img className="avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="Avatar"/> */}
+     {/* <img className="avatar" src="https://i.pinimg.com/originals/0d/dc/ca/0ddccae723d85a703b798a5e682c23c1.png" alt="Avatar"/> */}
     </div>
   );
 }

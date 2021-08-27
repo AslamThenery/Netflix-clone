@@ -1,9 +1,12 @@
 .banner{
-    
+    /* width: 100%; */
     background-size: cover;
     height: 448px;
     color: white;
    
+}
+.banner-img{
+    width: 100%;
 }
 
 .content{
