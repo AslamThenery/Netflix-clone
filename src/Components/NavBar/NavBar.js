@@ -45,7 +45,9 @@ function NavBar() {
         alt="Netflix Logo"
       />
       {/* <div className="pages"> */}
-      <i onClick={classHandle} id="icon" class="nav-icon fa fa-bars"></i>
+      <div className="icon-div" onClick={classHandle}>
+      <i  id="icon" class="nav-icon fa fa-bars"  onClick={classHandle}></i>
+      </div>
      { isActive ?
       <div className="nav-opts ">
        
