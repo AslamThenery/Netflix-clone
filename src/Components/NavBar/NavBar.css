@@ -18,7 +18,7 @@
     }
 .nav-icon{
         /* background-color: blanchedalmond; */
-        /* display: none; */
+        display: none;
         color: blanchedalmond;
         /* color: red; */
         margin-left: 10px;
@@ -106,8 +106,8 @@
     .nav-icon{
         display: block;
         margin-left:10px;
-        color: red;
-        font-size: 5rem;
+        /* color: red; */
+        font-size: 1.55rem;
         
     }
     .input-btn{
@@ -119,25 +119,90 @@
     }
     
 }
-/* @media (max-width:360px) {
-    .nav-btn{
+@media (max-width:360px) {
+    .logo{
         display: none;
+    }
+    .nav-opts{
+        /* display: block; */
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 10rem;
+        width:8rem;
+        background-color: black;
+        margin-top: 50px;
+        margin-left:6px ;
+        border-radius: 3px;
+        border: 1px solid white;
+        /* color: red; */
+    }
+    .nav-btn{
+        width: 8rem;
+        height: 3rem;
+    }
+    .nav-btn:hover{
+        background-color: white;
+        color: black;
     }
     .nav-icon{
         display: block;
-        margin-left: 20px;
+        margin-left:10px;
+        /* color: red; */
+        font-size: 1.5rem;
+        
     }
     .input-btn{
-        margin-left: -130px;
+        margin-right: 100px;
+        /* width: 180px; */
     }
     .search-input{
-        width: 150px;
+        width: 100px;
+        margin-left:210px;
     }
-    .search-button{
-        width: 40px;
-        font-size: 12px;
-    }
+}
+@media (max-width:768px) {
     .logo{
-        display: none; */
-    /* }
-} */
+        display: none;
+    }
+    .nav-opts{
+        
+        
+      
+        display: flex;
+        /* justify-content: space-around; */
+       
+        align-items: center;
+        
+        background-color: black;
+        
+       
+        
+        
+    }
+    .nav-btn{
+        width: 8rem;
+        height: 3rem;
+    }
+    .nav-btn:hover{
+        background-color: white;
+        color: black;
+    }
+    /* .nav-icon{
+        display: none;
+        margin-left:10px;
+        color: red;
+        font-size: 5rem;
+        
+    } */
+    .input-btn{
+        margin-left: -170px;
+        /* width: 180px; */
+    }
+    .search-input{
+        width: 160px;
+    }
+}

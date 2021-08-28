@@ -4,7 +4,7 @@ import "./NavBar.css";
 
 function NavBar() {
   const [searchTxt, setsearchTxt] = useState();
- const [isActive, setisActive] = useState(false)
+ const [isActive, setisActive] = useState(true)
   const history = useHistory();
 
   const homeHandle = () => {
