@@ -113,23 +113,19 @@
         width: 8rem;
         height: 3rem;
     }
-    .nav-btn:hover{
-        background-color: white;
-        color: black;
-        position: absolute;
-    }
+   
     .nav-icon{
         display: block;
         margin-left:10px;
         /* color: red; */
-        font-size: 10px;
+        font-size: 30px;
         
     }
-    .input-btn{
-        /* margin-left: -100px; */
+    /* .input-btn{
+        margin-left: -100px; */
         /* background-color: red; */
-        /* width: 180px; */
-    }
+        /* width: 180px;
+    } */
     .search-input{
         width: 150px;
     }
@@ -160,10 +156,7 @@
         width: 8rem;
         height: 3rem;
     }
-    .nav-btn:hover{
-        background-color: white;
-        color: black;
-    }
+   
     .nav-icon{
         display: block;
         margin-left:5px;
